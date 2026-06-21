@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>テスト管理台帳</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+       max-width: 900px; margin: 0 auto; padding: 30px 28px 80px; color:#2e3338; line-height:1.65; background:#fff; }
+h1 { font-size: 1.7rem; font-weight: 700; margin: 1.6em 0 .5em; color:#1a1a1a; }
+h1:first-of-type { margin-top: .3em; }
+h2 { font-size: 1.25rem; font-weight: 700; color:#1a1a1a; margin: 1.4em 0 .5em; }
+strong { font-weight: 700; color:#1a1a1a; }
+p { margin: .5rem 0; }
+ul { margin: .4rem 0; padding-left: 1.4em; }
+table { border-collapse: collapse; width: 100%; margin: 1em 0 1.4em; font-size: 14px; }
+th, td { border: 1px solid #d4d4d4; padding: 8px 14px; text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; color:#333; }
+tr:nth-child(even) td { background: #fafafa; }
+code { background:#f0f0f0; padding: 2px 6px; border-radius:4px; font-size:.9em;
+       font-family: "SFMono-Regular", Consolas, "Courier New", monospace; color:#2e3338; }
+blockquote { border-left: 4px solid #ddd; margin: 1em 0; padding: .5em 1em; background:#f9f9f9; color:#555;
+             font-size: 14px; }
+hr { border:none; border-top:1px solid #e0e0e0; margin: 2em 0; }
+.meta-footer { margin-top: 40px; padding-top: 14px; border-top:1px dashed #ccc; color:#999; font-size:12px; }
+</style>
+</head><body>
+<h1>🧪 テスト管理台帳</h1>
+<blockquote>
+<p><strong>これは「今週の正」を井上さんと Claude で毎朝育てる台帳。</strong><br />
+🔒 <strong>運用ルール（井上さん 2026-06-21）</strong>：CPN設計・今後は <strong>特段の指示がなければ変更しない</strong>。変えた方が良いと判断したら<strong>勝手に変えず「提案」</strong>する。<br />
+FMT：<strong>商材×媒体ごとに独立</strong>して 課題／CPN設計（表）／今後（表）。CPN名は「昨日(6/20)消化&gt;0」を全件。不明は「？」のまま。</p>
+</blockquote>
+<p><strong>最終更新: 2026-06-21（昨日=6/20 配信実績&gt;0 基準）</strong>　|　担当: DIR=甲斐(かい)智子さん／林晃司さん、静止画制作=児下美恵さん、CL窓口=甲田さん</p>
+<hr />
+<h1>🩲 スリム×Meta（目標CPA 10,000）</h1>
+<p><strong>課題</strong>：CTR（代理店1.5% vs うち1.1〜1.2%）→ CPCがボトルネック</p>
+<p><strong>CPN設計</strong></p>
+<table>
+<thead>
+<tr>
+<th>CPN名</th>
+<th>何のテストか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Slim-ASC-VIDEO-0619-夏記事</code></td>
+<td>夏記事の動画テスト</td>
+</tr>
+<tr>
+<td><code>Slim-ASC-IMAGE-0613-夏記事</code></td>
+<td>静止画023の勝ちアド展開・守り</td>
+</tr>
+<tr>
+<td><code>Slim-ASC-IMAGE-0619-夏記事-過去CTR画像</code></td>
+<td>過去CTRが高かったアドを1つテスト</td>
+</tr>
+<tr>
+<td><code>Slim-ASC-VIDEO-0613-夏記事 未テスト分</code></td>
+<td>新規アド28をテスト</td>
+</tr>
+<tr>
+<td><code>Slim-興味関心-VIDEO-0613</code></td>
+<td>興味関心の動画（疲弊・刈り取り）</td>
+</tr>
+<tr>
+<td><code>Slim-ASC-VIDEO-0618-夏記事</code></td>
+<td>新規アド32をテスト</td>
+</tr>
+<tr>
+<td><code>Slim-ASC-IMAGE-0610-夏記事(リマケ)</code></td>
+<td>勝ちアド展開・守り</td>
+</tr>
+</tbody>
+</table>
+<p><strong>今後</strong></p>
+<table>
+<thead>
+<tr>
+<th>ディレクター</th>
+<th>日付</th>
+<th>依頼内容</th>
+<th>本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>児下さん</td>
+<td>6/22</td>
+<td>静止画 夏冷感版</td>
+<td>3点</td>
+</tr>
+<tr>
+<td>林晃司さん・児下さん</td>
+<td>6/25</td>
+<td>静止画BU</td>
+<td>5本</td>
+</tr>
+<tr>
+<td>林晃司さん・児下さん</td>
+<td>6/27</td>
+<td>動画BU（既存の一部替え）</td>
+<td>5本</td>
+</tr>
+<tr>
+<td>甲斐さん</td>
+<td>7/3(予定)</td>
+<td>アマギフのオファー替え＋CTL特化動画</td>
+<td>5本</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>🩲 スリム×Google デマンド（目標CPA 10,000）</h1>
+<p><strong>課題</strong>：メタ勝ちクリエイティブの横展開</p>
+<p><strong>CPN設計</strong></p>
+<table>
+<thead>
+<tr>
+<th>CPN名</th>
+<th>何のテストか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>【Demand】リマケ用_SL_静止画_0618(CV最大化)</code></td>
+<td>リマケ用の静止画テスト</td>
+</tr>
+<tr>
+<td><code>【Demand】KW指名_SL_動画</code></td>
+<td>KW指名の動画</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>※slim デマンドは「リマケ用静止画／通常静止画／KW指名動画」が<strong>それぞれ異なるCPN</strong>として配信中（井上さん 6/21）。「動画オフ→静止画へ切替」は誤解でした。<strong>通常静止画CPN</strong>は6/20データに未反映→明日の日次分析で確認・追記。</p>
+</blockquote>
+<p><strong>今後</strong>（Metaの展開に合わせる）</p>
+<table>
+<thead>
+<tr>
+<th>ディレクター</th>
+<th>日付</th>
+<th>依頼内容</th>
+<th>本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>児下さん</td>
+<td>6/22</td>
+<td>静止画 夏冷感版</td>
+<td>3点</td>
+</tr>
+<tr>
+<td>林晃司さん・児下さん</td>
+<td>6/25</td>
+<td>静止画BU</td>
+<td>5本</td>
+</tr>
+<tr>
+<td>林晃司さん・児下さん</td>
+<td>6/27</td>
+<td>動画BU（既存の一部替え）</td>
+<td>5本</td>
+</tr>
+<tr>
+<td>甲斐さん</td>
+<td>7/3(予定)</td>
+<td>アマギフのオファー替え＋CTL特化動画</td>
+<td>5本</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>🩲 スリム×Google CTV（目標CPA 10,000）</h1>
+<p><strong>課題</strong>：<strong>CPM上昇によるCPCの高騰</strong>がメイン課題。次に <strong>CVRを3%→4%へ上昇</strong>させること</p>
+<p><strong>CPN設計</strong></p>
+<table>
+<thead>
+<tr>
+<th>CPN名</th>
+<th>何のテストか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>【CTV】DCA配信×5%(4/20)_SL</code></td>
+<td>CV最大化×不調時間帯除外。<strong>6/21〜 類似10%→キーワード指名に変更しCPM低下を狙うテスト中</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>今後</strong>（Metaと同様に展開。ただし甲斐さん依頼分はCTV最適化で制作）</p>
+<table>
+<thead>
+<tr>
+<th>ディレクター</th>
+<th>日付</th>
+<th>依頼内容</th>
+<th>本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>児下さん</td>
+<td>6/22</td>
+<td>静止画 夏冷感版</td>
+<td>3点</td>
+</tr>
+<tr>
+<td>林晃司さん・児下さん</td>
+<td>6/25</td>
+<td>静止画BU</td>
+<td>5本</td>
+</tr>
+<tr>
+<td>林晃司さん・児下さん</td>
+<td>6/27</td>
+<td>動画BU（既存の一部替え）</td>
+<td>5本</td>
+</tr>
+<tr>
+<td>甲斐さん</td>
+<td>7/3(予定)</td>
+<td>アマギフ替え＋CTL特化動画（<strong>CTV最適化で制作</strong>）</td>
+<td>5本</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>🩲 リセット×Meta（目標CPA 10,000）</h1>
+<p><strong>課題</strong>：<strong>夏に向けて「通気性」を訴求</strong>（メイン）。アド28・29のBU版が好調も爆発的増は見込み薄</p>
+<p><strong>CPN設計</strong></p>
+<table>
+<thead>
+<tr>
+<th>CPN名</th>
+<th>何のテストか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Reset-ASC-VIDEO</code>(無印)</td>
+<td>産後記事のスポットテスト</td>
+</tr>
+<tr>
+<td><code>Reset-ASC-VIDEO-更年期-0614</code></td>
+<td>アド28・29</td>
+</tr>
+<tr>
+<td><code>Reset-ASC-VIDEO-更年期-0612</code></td>
+<td>アド28・29</td>
+</tr>
+<tr>
+<td><code>Reset-ASC-VIDEO-更年期-0618</code></td>
+<td>アド28の勝ちを継続</td>
+</tr>
+</tbody>
+</table>
+<p><strong>今後</strong></p>
+<table>
+<thead>
+<tr>
+<th>ディレクター</th>
+<th>日付</th>
+<th>依頼内容</th>
+<th>本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>岡島さん</td>
+<td>6/22（明日・納品予定）</td>
+<td>ブラッシュアップ</td>
+<td>5本</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>💊 フレル×Meta（目標CPA 17,000）</h1>
+<p><strong>課題</strong>：<strong>CVR</strong>。顕在層（＝美容室にお金を払っている美容院対策層）に「美容室に行かずシャンプーでスイッチ」を訴求しているが、<strong>顕在層を確実に刈り取る動線がまだない</strong>ことが課題</p>
+<p><strong>CPN設計</strong></p>
+<table>
+<thead>
+<tr>
+<th>CPN名</th>
+<th>何のテストか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ASC_IMAGE</code></td>
+<td>白髪訴求の本命（勝ち筋）</td>
+</tr>
+<tr>
+<td><code>ASC_VIDEO</code></td>
+<td>白髪訴求の動画版</td>
+</tr>
+<tr>
+<td><code>ASC_VIDEO-0619-第2弾記事-アンケート除外</code></td>
+<td>第2弾記事のアンケート部分を除外してテスト</td>
+</tr>
+</tbody>
+</table>
+<p><strong>今後</strong></p>
+<table>
+<thead>
+<tr>
+<th>ディレクター</th>
+<th>日付</th>
+<th>依頼内容</th>
+<th>本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>林晃司さん</td>
+<td>6/23(火)</td>
+<td>マスカラ切替クリエイティブ（23日以降版）</td>
+<td>3本</td>
+</tr>
+<tr>
+<td>甲斐さん</td>
+<td>？</td>
+<td>新規制作（詳細は井上さんが後で連絡）</td>
+<td>？</td>
+</tr>
+<tr>
+<td>甲田さん</td>
+<td>6月末まで</td>
+<td>記事内に美容院からのスイッチコンテンツを追加</td>
+<td>？</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>💊 フレル×Google（目標CPA 17,000）</h1>
+<p><strong>課題</strong>：顕在層（美容室にお金を払っている人）に「美容室に行かずシャンプーでスイッチ」を訴求。ただし<strong>露出が強すぎる</strong>問題</p>
+<p><strong>CPN設計</strong></p>
+<table>
+<thead>
+<tr>
+<th>CPN名</th>
+<th>何のテストか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>【Demand】KW指名_静止画</code></td>
+<td>目標CV5,000円に下げて露出を抑えるテスト</td>
+</tr>
+<tr>
+<td><code>【Demand】KW指名_動画</code></td>
+<td>過去成果の動画</td>
+</tr>
+</tbody>
+</table>
+<p><strong>今後</strong>（担当=甲斐さん。Meta素材を転用するためMetaと同じ）</p>
+<table>
+<thead>
+<tr>
+<th>ディレクター</th>
+<th>日付</th>
+<th>依頼内容</th>
+<th>本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>林晃司さん</td>
+<td>6/23(火)</td>
+<td>マスカラ切替クリエイティブ（Meta素材転用）</td>
+<td>3本</td>
+</tr>
+<tr>
+<td>甲斐さん</td>
+<td>？</td>
+<td>新規制作（Meta素材転用）</td>
+<td>？</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>💊 フロリカ×Meta（目標CPA 25,000）</h1>
+<p><strong>課題</strong>：<strong>「痛くないこと」を伝えきれていない</strong>こと</p>
+<p><strong>CPN設計</strong></p>
+<table>
+<thead>
+<tr>
+<th>CPN名</th>
+<th>何のテストか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ASC-VIDEO-0619</code></td>
+<td>新規の動画（「痛くない」訴求）をテスト中</td>
+</tr>
+<tr>
+<td><code>ASC-IMAGE-0619</code></td>
+<td>Image0619 ピクセル正常化し再テスト</td>
+</tr>
+<tr>
+<td><code>ASC-IMAGE-0615</code></td>
+<td>過去勝ちをピクセル正常化の上で再度テスト中</td>
+</tr>
+</tbody>
+</table>
+<p><strong>今後</strong>（Meta素材の転用）</p>
+<table>
+<thead>
+<tr>
+<th>ディレクター</th>
+<th>日付</th>
+<th>依頼内容</th>
+<th>本数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>甲斐さん</td>
+<td>？</td>
+<td>ショート動画のブラッシュアップ</td>
+<td>？</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>備考：小舘さんが入院中のため、いつ連絡が来るか不明。<strong>こちらから追って突っつく</strong>。</p>
+</blockquote>
+<hr />
+<h2>🤖 Claude 裏取りログ</h2>
+<ul>
+<li>2026-06-21 骨格提示(音声)。furel/florica Meta 6/20破損を修復。FMT＝商材×媒体ごとに独立(課題/CPN設計/今後)。🔒変更は提案制。</li>
+<li>2026-06-21 修正反映：slim静止画夏化6/22／slim各媒体今後にカイ改め甲斐さん7/3アマギフ替え+CTL特化動画5本／reset岡島さん6/22 BU5本／furel Meta・Google ディレクター=林晃司さん(3本)+甲斐さん新規制作行／florica甲斐さんショート動画BU(小舘さん入院・追って突っつく)／florica Googleデマンド削除。</li>
+<li>2026-06-21 呼称確定(井上さん)：カイさん=<strong>甲斐さん</strong>(漢字)／林晃司・林康二=<strong>林晃司さん</strong>で統一。florica <code>ASC-VIDEO-0619</code>=新規動画「痛くない」訴求テスト／<code>ASC-IMAGE-0615</code>=過去勝ちをピクセル正常化し再テスト。</li>
+<li>2026-06-21 確認解決(井上さん)：①小舘さん=小出さん(同一) ②slimデマンドは「リマケ用静止画／通常静止画／KW指名動画」が<strong>異なるCPN</strong>(「オフ・切替」理解は誤り。通常静止画CPNは明日の日次分析で確認・追記)。</li>
+<li>2026-06-21 運用追加：<strong>日次分析時にLooker更新と本台帳をセットで井上さんに提示＋変更提案</strong>（memory提示ルール）。提示は日次完了報告と同時(Looker反映+CL照合PASS+アド判定表+本台帳の4点)。</li>
+<li>2026-06-21 <strong>課題変更(井上さん)</strong>：slim CTV=CPM上昇によるCPC高騰がメイン+CVR3%→4%／reset=夏に向け通気性訴求がメイン／furel Meta=CVR・顕在層(美容院対策層)の刈り取り動線がまだない／furel Google=美容室スイッチ訴求+露出強すぎ／florica Meta=「痛くない」を伝えきれていない。furel Meta今後に甲田さん6月末「記事内に美容院スイッチコンテンツ追加」1行。</li>
+<li>2026-06-21 検知穴(消化全消失をNULL検知/CL照合が見抜けず)→✅記録済(反省ノート + BUG-037 + 再発防止タスク化)。</li>
+</ul>
+<div class="meta-footer">共有用ウェブページ（自動生成）／ 元データ: テスト管理台帳MD ／ 生成: 2026-06-22 00:01</div>
+</body></html>
